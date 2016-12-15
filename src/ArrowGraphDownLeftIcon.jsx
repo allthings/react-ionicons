@@ -1,0 +1,5 @@
+import React from 'react'
+
+const ArrowGraphDownLeftIcon = props => <svg viewBox="0 0 512 512" {...props}><path d="M32 384V224l60.8 60.8L223.7 144l107 112L480 128 330.7 330.7 223.7 224l-93.5 98.2L192 384z"/></svg>
+
+export default ArrowGraphDownLeftIcon
