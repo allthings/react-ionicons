@@ -1,0 +1,41 @@
+{
+  "name": "@allthings/react-ionicons",
+  "author": "Allthings",
+  "license": "MIT",
+  "description": "Reactified ionicons",
+  "version": "1.0.0",
+  "files": [
+    "lib",
+    "es",
+    "src"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf lib es",
+    "create:svg": "./bin/svg.sh src",
+    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "BABEL_ENV=es babel src --out-dir es",
+    "build": "npm run clean && npm run build:commonjs && npm run build:es",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "dependencies": {
+    "react": "15.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "6.18.0",
+    "babel-preset-es2015": "6.18.0",
+    "babel-preset-react": "6.16.0",
+    "cheerio": "0.22.0",
+    "glob": "7.1.1",
+    "ionicons": "2.0.1",
+    "svgo": "0.7.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allthings/react-ionicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/allthings/react-ionicons/issues"
+  },
+  "homepage": "https://github.com/allthings/react-ionicons#readme"
+}
