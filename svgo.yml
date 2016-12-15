@@ -1,0 +1,4 @@
+plugins:
+  - removeStyleElement: true
+  - removeAttrs:
+      attrs: 'class'
