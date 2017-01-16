@@ -13,13 +13,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf lib es",
     "create:svg": "./bin/svg.sh src",
-    "build:commonjs": "BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:es": "BABEL_ENV=es babel src --out-dir es",
-    "build": "npm run clean && npm run build:commonjs && npm run build:es",
+    "build:commonjs": "BABEL_ENV=commonjs babel --quiet src --out-dir lib",
+    "build:es": "BABEL_ENV=es babel --quiet src --out-dir es",
+    "build": "npm run clean && npm run build:es && npm run build:commonjs",
     "prepublish": "npm run clean && npm run build"
-  },
-  "dependencies": {
-    "react": "15.4.1"
   },
   "devDependencies": {
     "babel-cli": "6.18.0",
@@ -28,7 +25,11 @@
     "cheerio": "0.22.0",
     "glob": "7.1.1",
     "ionicons": "2.0.1",
+    "react": "^15.4.2",
     "svgo": "0.7.1"
+  },
+  "peerDependencies": {
+    "react": "^15.4.2"
   },
   "repository": {
     "type": "git",
